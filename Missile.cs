@@ -8,10 +8,10 @@ public class StaffScript : MonoBehaviour
 
     void Update()
     {
-        //постоянно пересчитываем скорость снаряда. По умолчанию она равна 0
+        //allows missile to move forward, using it's speed
         transform.position += transform.forward * speed * Time.deltaTime;
     }
-
+//allows destroy the OTHER game object along with the moving object itself
     private void OnTriggerEnter(Collider other)
     {
         EnemyScript theEnemy = other.GetComponent<EnemyScript>();
